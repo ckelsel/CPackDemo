@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.6)
+ 
+PROJECT(Demo)
+ 
+ADD_EXECUTABLE(Demo main.cpp)
+INSTALL(TARGETS Demo DESTINATION bin)
+ 
+# DEB Package
+#SET(CPACK_GENERATOR "DEB")
+#SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Kunming Xie") #required
+
+# RPM Package
+SET(CPACK_GENERATOR "RPM")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Kunming Xie") #required
+ 
+INCLUDE(CPack)
